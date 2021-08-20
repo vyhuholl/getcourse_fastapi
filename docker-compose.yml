@@ -3,10 +3,17 @@
 version: '3.9'
 
 services:
-  web:
-    build: .
-    command: uvicorn app.main:app --host 0.0.0.0
-    volumes:
-      - .:/app
-    ports:
-      - 8008:8000
+    web:
+        build: nginx
+        ports:
+          - 80:80
+          - 443:443
+        depends_on:
+          - api
+
+    api:
+        build: app
+        environment:
+          - PORT=8080
+        ports:
+          - 8080:8080

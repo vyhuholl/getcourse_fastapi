@@ -1,2 +1,2 @@
 # getcourse_fastapi
-Тестовое задание.
+Тестовое задание. Доступ к https://getcourse.ru через FastAPI.

@@ -6,7 +6,7 @@ from typing import Optional
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from passlib.context import CryptContext
-from models import Token, TokenData, User, UserInDB, Deal
+from .models import Token, TokenData, User, UserInDB, Deal
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.security import OAuth2PasswordRequestForm

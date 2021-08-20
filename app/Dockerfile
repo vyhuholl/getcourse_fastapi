@@ -1,7 +1,7 @@
 # Dockerfile
 
 # pull the official docker image
-FROM python:3.9.4-slim
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
 # set work directory
 WORKDIR /app
